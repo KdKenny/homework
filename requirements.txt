@@ -6,3 +6,6 @@ stevedore==5.4.1
 virtualenv==20.31.2
 virtualenv-clone==0.5.7
 virtualenvwrapper==6.1.1
+pandas
+psycopg2-binary
+python-dotenv
