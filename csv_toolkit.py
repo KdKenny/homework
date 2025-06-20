@@ -52,7 +52,7 @@ def import_csv_to_db(csv_file, table_name):
 
         # 如果導入到 'adminusers_adminuserid' 且 CSV 中存在 'id' 欄位，則移除它
         # 假設數據庫中的 'id' 是自動遞增主鍵
-        if table_name == 'adminusers_adminuser' and 'id' in df_to_insert.columns:
+        if table_name in ['adminusers_adminuser', 'listings_two_dish_rice', 'comments_comment_rate', 'comments_commentrating'] and 'id' in df_to_insert.columns:
             df_to_insert.drop(columns=['id'], inplace=True, errors='ignore')
             print(f"注意：已從導入數據中移除 'id' 欄位，以允許 '{table_name}' 表格的自動主鍵生成。")
 
