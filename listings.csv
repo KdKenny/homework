@@ -1,55 +1,55 @@
-id,restaurant_name,list_date,edit_date,restaurant_photo_main,restaurant_area,restaurant_district,restaurant_street,restaurant_address,fullday,openhour_fullday,closehour_fullday,afternoon,openhour_afternoon,closehour_afternoon,night,openhour_night,closehour_night,nightsnack,openhour_nightsnack,closehour_nightsnack,category_chinese,category_western,category_seafood,category_veg,category_japan,menu,menu_photo1,menu_photo2,menu_photo3,menu_photo4,menu_photo5,menu_photo6,two_dish_price,three_dish_price,drink_price,soup_price,payment_cash,payment_octopus,payment_alipayhk,payment_wechatpay,payment_payeme,dine_in,takeaway,takeaway_self,takeaway_keeta,takeaway_foodpanda,is_published,discount_coupon
-1,泰興食坊,2025-06-16 15:15:00.944201+00:00,2025/6/16,photos/R01_0.png,Hong Kong,Central & Western,Goodview Street,123,TRUE,12:00:00,18:00:00,TRUE,,,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,TRUE,"帶子雞扒
-野菌忌廉湯
-薯蓉",photos/R01_1.png,photos/R01_2.png,photos/R01_3.png,NaN,NaN,NaN,50,58,15,10,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-2,八褔小廚,2025-06-16 15:19:32.009656+00:00,2025/6/16,photos/R02_0.png,Kowloon,Kowloon City,Nam Kok road,33,TRUE,06:00:00,20:00:00,TRUE,,,FALSE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"西蘭花
-雜菜雞皇飯",photos/R02_2.png,photos/R02_1.png,NaN,NaN,NaN,NaN,40,42,8,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-3,德利美食,2025-06-16 15:33:38.631630+00:00,2025/6/16,photos/R03_1.png,New Territories,Yuen Long,big house road,No145,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"麻辣鍋
-老疊香",NaN,NaN,NaN,NaN,NaN,NaN,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-4,岱民佐敦店,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R04_0.png,Kowloon,Yau Tsim Mong,hip wo street,no56,FALSE,12:00:00,22:00:00,FALSE,,,TRUE,18:00:00,00:00:00,TRUE,18:00:00,00:00:00,TRUE,TRUE,FALSE,FALSE,TRUE,"牛肝菌濃湯
-鱈魚粟粟你好嗎
-原個南瓜是日蔬菜糙米飯
-恭祝你福壽笑開個眉",photos/R04_1.png,photos/R04_2.png,photos/R04_3.png,photos/R04_4.png,photos/R04_5.png,photos/R04_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-5,岱民荃灣店,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R05_0.png,New Territories,Tsuen Wan,Central & Western,no87,FALSE,12:00:00,20:00:00,FALSE,,,TRUE,18:00:00,00:00:00,TRUE,18:00:00,00:00:00,TRUE,TRUE,FALSE,FALSE,TRUE,"帶子雞扒
-野菌忌廉湯
-薯蓉",photos/R05_1.png,photos/R05_2.png,photos/R05_3.png,photos/R05_4.png,photos/R05_5.png,photos/R05_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-6,仨餸小廚,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R06_0.png,New Territories,Sai Kung,Man nin Street,23,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"西蘭花
-雜菜雞皇飯",photos/R06_1.png,photos/R06_2.png,photos/R06_3.png,photos/R06_4.png,photos/R06_5.png,photos/R06_6.png,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-7,家之味美食,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R07_0.png,New Territories,Tai Po,Chi Sin road,565,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"麻辣鍋
-老疊香",photos/R07_1.png,photos/R07_2.png,photos/R07_3.png,photos/R07_4.png,NaN,NaN,50,58,15,10,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-8,岱民北角２店,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R08_0.png,Hong Kong,Eastern,Panda road,235,TRUE,12:00:00,22:00:00,TRUE,12:00:00,22:00:00,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"牛肝菌濃湯
-鱈魚粟粟你好嗎
-原個南瓜是日蔬菜糙米飯
-恭祝你福壽笑開個眉",photos/R08_1.png,photos/R08_2.png,photos/R08_3.png,photos/R08_4.png,photos/R08_5.png,photos/R08_6.png,40,42,8,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-9,陸記燒臘,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R09_0.png,New Territories,Tuen Mun,Chi Tat road,8,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"帶子雞扒
-野菌忌廉湯
-薯蓉",photos/R09_1.png,NaN,NaN,NaN,NaN,NaN,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-10,敏華冰廳,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R10_0.png,New Territories,Sha Tin,Shu Wo street,23,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"西蘭花
-雜菜雞皇飯",photos/R10_1.png,photos/R10_2.png,photos/R10_3.png,photos/R10_4.png,photos/R10_5.png,photos/R10_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-11,廸自由快餐,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R11_0.png,Hong Kong,Southern,Abba Road,9,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"麻辣鍋
-老疊香",photos/R11_1.png,photos/R11_2.png,photos/R11_3.png,photos/R11_4.png,photos/R11_5.png,photos/R11_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-12,銀杏冰室,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R12_0.png,Hong Kong,Wan Chai,harbour road,No1,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"帶子雞扒
-野菌忌廉湯
-薯蓉",photos/R12_1.png,photos/R12_2.png,photos/R12_3.png,photos/R12_4.png,photos/R12_5.png,photos/R12_6.png,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-13,FRESH新鮮生活,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R13_0.png,Hong Kong,Eastern,North Point Road,12,TRUE,12:00:00,22:00:00,TRUE,12:00:00,22:00:00,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"牛肝菌濃湯
+﻿id,restaurant_name,list_date,edit_date,restaurant_photo_main,restaurant_area,restaurant_district,restaurant_street,restaurant_address,fullday,openhour_fullday,closehour_fullday,afternoon,openhour_afternoon,closehour_afternoon,night,openhour_night,closehour_night,nightsnack,openhour_nightsnack,closehour_nightsnack,category_chinese,category_western,category_seafood,category_veg,category_japan,menu,menu_photo1,menu_photo2,menu_photo3,menu_photo4,menu_photo5,menu_photo6,two_dish_price,three_dish_price,drink_price,soup_price,payment_cash,payment_octopus,payment_alipayhk,payment_wechatpay,payment_payeme,dine_in,takeaway,takeaway_self,takeaway_keeta,takeaway_foodpanda,is_published,discount_coupon
+20,張和隆飯店,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R21_1.jpg,Islands,Islands,Mei Wo,123,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"牛肝菌濃湯
 鱈魚粟粟你好嗎
 
-恭祝你福壽笑開個眉",NaN,NaN,NaN,NaN,NaN,NaN,50,58,15,10,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-14,自由快餐,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R15_0.png,Kowloon,Sham Shui Po,Dai Nam Street,74,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"西蘭花
-雜菜雞皇飯",photos/R15_1.png,photos/R15_2.png,photos/R15_3.png,photos/R15_4.png,NaN,NaN,40,42,8,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-15,安發小食店,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R16_0.png,Kowloon,Wong Tai Sin,Wong Tai Sin Road,42,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"麻辣鍋
-老疊香",photos/R16_1.png,photos/R16_2.png,photos/R16_3.png,photos/R16_4.png,photos/R16_5.png,photos/R16_6.png,50,58,15,10,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-16,超人燒鵝,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R17_0.png,Kowloon,Yau Tsim Mong,Tin Man Toi Road,12,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"帶子雞扒
+恭祝你福壽笑開個眉",photos/R21_2.jpg,photos/R21_3.jpg,photos/R21_4.jpg,photos/R21_5.jpg,photos/R21_6.jpg,photos/R21_7.jpg,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+1,泰興食坊,2025-06-16 15:15:00.944201+00:00,2025-06-16,photos/R01_0.png,Hong Kong,Central & Western,Goodview Street,123,True,12:00:00,18:00:00,True,,,True,,,True,,,True,True,True,True,True,"帶子雞扒
 野菌忌廉湯
-薯蓉",photos/R17_1.png,photos/R17_2.png,photos/R17_3.png,photos/R17_4.png,photos/R17_5.png,photos/R17_6.png,40,42,8,8,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-17,海港酒家,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R18_0.png,Kowloon,Sham Shui Po,Golden Road,43,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"麻辣鍋
-老疊香",photos/R18_1.png,photos/R18_2.png,photos/R18_3.png,photos/R18_4.png,photos/R18_5.png,photos/R18_6.png,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
-18,三多美食,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R19_0.png,Kowloon,Kwun Tong,Kwun Tong Road,12,TRUE,12:00:00,22:00:00,TRUE,12:00:00,22:00:00,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"帶子雞扒
+薯蓉",photos/R01_1.png,photos/R01_2.png,photos/R01_3.png,NaN,NaN,NaN,50,58,15,10,True,True,True,True,True,True,True,True,False,False,True,False
+2,八褔小廚,2025-06-16 15:19:32.009656+00:00,2025-06-16,photos/R02_0.png,Kowloon,Kowloon City,Nam Kok road,33,True,06:00:00,20:00:00,True,,,False,,,False,,,True,True,True,True,False,"西蘭花
+雜菜雞皇飯",photos/R02_2.png,photos/R02_1.png,NaN,NaN,NaN,NaN,40,42,8,8,True,True,True,False,False,False,True,True,False,False,True,False
+3,德利美食,2025-06-16 15:33:38.631630+00:00,2025-06-16,photos/R03_1.png,New Territories,Yuen Long,big house road,No145,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,True,,,True,True,True,True,False,"麻辣鍋
+老疊香",NaN,NaN,NaN,NaN,NaN,NaN,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+4,岱民佐敦店,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R04_0.png,Kowloon,Yau Tsim Mong,hip wo street,no56,False,12:00:00,22:00:00,False,,,True,18:00:00,00:00:00,True,18:00:00,00:00:00,True,True,False,False,True,"牛肝菌濃湯
+鱈魚粟粟你好嗎
+原個南瓜是日蔬菜糙米飯
+恭祝你福壽笑開個眉",photos/R04_1.png,photos/R04_2.png,photos/R04_3.png,photos/R04_4.png,photos/R04_5.png,photos/R04_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True
+5,岱民荃灣店,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R05_0.png,New Territories,Tsuen Wan,Central & Western,no87,False,12:00:00,20:00:00,False,,,True,18:00:00,00:00:00,True,18:00:00,00:00:00,True,True,False,False,True,"帶子雞扒
 野菌忌廉湯
-薯蓉",photos/R19_1.png,photos/R19_2.png,photos/R19_3.png,photos/R19_4.png,photos/R19_5.png,photos/R19_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-19,東東兩餸飯,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R20_0.png,Islands,Islands,Cheung Chau,86,TRUE,12:00:00,22:00:00,TRUE,12:00:00,22:00:00,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"西蘭花
-雜菜雞皇飯",photos/R20_1.png,photos/R20_2.png,photos/R20_3.png,photos/R20_4.png,photos/R20_5.png,photos/R20_6.png,48,57,11,0,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE
-20,張和隆飯店,2025-06-16 15:40:42.610435+00:00,2025/6/16,photos/R21_1.jpg,Islands,Islands,Mei Wo,123,TRUE,12:00:00,20:00:00,TRUE,12:00:00,20:00:00,TRUE,,,FALSE,,,TRUE,TRUE,TRUE,TRUE,FALSE,"牛肝菌濃湯
+薯蓉",photos/R05_1.png,photos/R05_2.png,photos/R05_3.png,photos/R05_4.png,photos/R05_5.png,photos/R05_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True
+6,仨餸小廚,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R06_0.png,New Territories,Sai Kung,Man nin Street,23,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"西蘭花
+雜菜雞皇飯",photos/R06_1.png,photos/R06_2.png,photos/R06_3.png,photos/R06_4.png,photos/R06_5.png,photos/R06_6.png,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+7,家之味美食,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R07_0.png,New Territories,Tai Po,Chi Sin road,565,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"麻辣鍋
+老疊香",photos/R07_1.png,photos/R07_2.png,photos/R07_3.png,photos/R07_4.png,NaN,NaN,50,58,15,10,True,True,True,True,True,True,True,True,False,False,True,False
+8,岱民北角２店,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R08_0.png,Hong Kong,Eastern,Panda road,235,True,12:00:00,22:00:00,True,12:00:00,22:00:00,True,,,True,,,True,True,True,True,False,"牛肝菌濃湯
+鱈魚粟粟你好嗎
+原個南瓜是日蔬菜糙米飯
+恭祝你福壽笑開個眉",photos/R08_1.png,photos/R08_2.png,photos/R08_3.png,photos/R08_4.png,photos/R08_5.png,photos/R08_6.png,40,42,8,8,True,True,True,False,False,False,True,True,False,False,True,False
+9,陸記燒臘,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R09_0.png,New Territories,Tuen Mun,Chi Tat road,8,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"帶子雞扒
+野菌忌廉湯
+薯蓉",photos/R09_1.png,NaN,NaN,NaN,NaN,NaN,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+10,敏華冰廳,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R10_0.png,New Territories,Sha Tin,Shu Wo street,23,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"西蘭花
+雜菜雞皇飯",photos/R10_1.png,photos/R10_2.png,photos/R10_3.png,photos/R10_4.png,photos/R10_5.png,photos/R10_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True
+11,廸自由快餐,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R11_0.png,Hong Kong,Southern,Abba Road,9,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"麻辣鍋
+老疊香",photos/R11_1.png,photos/R11_2.png,photos/R11_3.png,photos/R11_4.png,photos/R11_5.png,photos/R11_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True
+12,銀杏冰室,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R12_0.png,Hong Kong,Wan Chai,harbour road,No1,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"帶子雞扒
+野菌忌廉湯
+薯蓉",photos/R12_1.png,photos/R12_2.png,photos/R12_3.png,photos/R12_4.png,photos/R12_5.png,photos/R12_6.png,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+13,FRESH新鮮生活,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R13_0.png,Hong Kong,Eastern,North Point Road,12,True,12:00:00,22:00:00,True,12:00:00,22:00:00,True,,,True,,,True,True,True,True,False,"牛肝菌濃湯
 鱈魚粟粟你好嗎
 
-恭祝你福壽笑開個眉",photos/R21_2.jpg,photos/R21_3.jpg,photos/R21_4.jpg,photos/R21_5.jpg,photos/R21_6.jpg,photos/R21_7.jpg,47,50,12,10,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+恭祝你福壽笑開個眉",NaN,NaN,NaN,NaN,NaN,NaN,50,58,15,10,True,True,True,True,True,True,True,True,False,False,True,False
+14,自由快餐,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R15_0.png,Kowloon,Sham Shui Po,Dai Nam Street,74,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"西蘭花
+雜菜雞皇飯",photos/R15_1.png,photos/R15_2.png,photos/R15_3.png,photos/R15_4.png,NaN,NaN,40,42,8,8,True,True,True,False,False,False,True,True,False,False,True,False
+15,安發小食店,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R16_0.png,Kowloon,Wong Tai Sin,Wong Tai Sin Road,42,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"麻辣鍋
+老疊香",photos/R16_1.png,photos/R16_2.png,photos/R16_3.png,photos/R16_4.png,photos/R16_5.png,photos/R16_6.png,50,58,15,10,True,True,True,True,True,True,True,True,False,False,True,False
+16,超人燒鵝,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R17_0.png,Kowloon,Yau Tsim Mong,Tin Man Toi Road,12,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"帶子雞扒
+野菌忌廉湯
+薯蓉",photos/R17_1.png,photos/R17_2.png,photos/R17_3.png,photos/R17_4.png,photos/R17_5.png,photos/R17_6.png,40,42,8,8,True,True,True,False,False,False,True,True,False,False,True,False
+17,海港酒家,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R18_0.png,Kowloon,Sham Shui Po,Golden Road,43,True,12:00:00,20:00:00,True,12:00:00,20:00:00,True,,,False,,,True,True,True,True,False,"麻辣鍋
+老疊香",photos/R18_1.png,photos/R18_2.png,photos/R18_3.png,photos/R18_4.png,photos/R18_5.png,photos/R18_6.png,47,50,12,10,True,True,True,True,True,False,True,True,False,False,True,False
+18,三多美食,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R19_0.png,Kowloon,Kwun Tong,Kwun Tong Road,12,True,12:00:00,22:00:00,True,12:00:00,22:00:00,True,,,True,,,True,True,True,True,False,"帶子雞扒
+野菌忌廉湯
+薯蓉",photos/R19_1.png,photos/R19_2.png,photos/R19_3.png,photos/R19_4.png,photos/R19_5.png,photos/R19_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True
+19,東東兩餸飯,2025-06-16 15:40:42.610435+00:00,2025-06-16,photos/R20_0.png,Islands,Islands,Cheung Chau,86,True,12:00:00,22:00:00,True,12:00:00,22:00:00,True,,,True,,,True,True,True,True,False,"西蘭花
+雜菜雞皇飯",photos/R20_1.png,photos/R20_2.png,photos/R20_3.png,photos/R20_4.png,photos/R20_5.png,photos/R20_6.png,48,57,11,0,True,True,True,False,False,False,True,True,False,False,True,True

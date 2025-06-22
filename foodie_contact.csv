@@ -1,0 +1,23 @@
+﻿id,foodie_name,updated_date,gender,age_range,occupation,live_district,favor_chinese,favor_western,favor_veg,favor_organic,favor_japan,favor_korean,favor_thai,favor_seafood,favor_muslim,favor_no_beef,favor_no_pork,foodie_desc,foodie_photo,is_mvp,user_id
+1,Admin,2025-06-21 05:23:14.923801+00:00,Other,18-25,other,Kwun Tong,True,True,True,True,True,True,True,True,True,True,True,,foodie_photos/logo.png,False,1
+2,User1,2025-06-21 05:23:14.923801+00:00,Female,18-25,technical,Yuen Long,True,True,True,True,False,True,True,True,False,True,True,超鐘意試街坊小店，兩餸飯係每日精神支柱。,foodie_photos/logo1.jpg,False,2
+3,User2,2025-06-21 05:23:14.923801+00:00,Male,46-55,driver,Kwai Tsing,True,True,False,False,True,True,False,False,False,False,True,唔鍾意太油，但食得出邊間煮得用心。,foodie_photos/logo2.jpg,False,3
+4,User3,2025-06-21 05:23:14.923801+00:00,Male,26-35,office,Sha Tin,True,True,True,True,True,True,True,True,False,False,True,我係白飯殺手，配餸最緊要夠味又唔太鹹。,foodie_photos/logo3.jpg,False,4
+5,User4,2025-06-21 05:23:14.923801+00:00,Male,36-45,wife,Sai Kung,True,True,True,True,True,False,True,False,False,False,False,每日中午都會搵新地方食飯，順便比個評分。,foodie_photos/logo4.jpg,False,5
+6,User5,2025-06-21 05:23:14.923801+00:00,Male,26-35,other,Central & Western,True,False,True,True,False,True,False,True,False,False,True,兩餸飯要平靚正又唔hea煮，唔係即刻轉場。,foodie_photos/logo5.jpg,False,6
+7,User6,2025-06-21 05:23:14.923801+00:00,Male,18-25,office,Sham Shui Po,True,True,True,False,True,False,True,True,False,False,True,鍾意試新野，唔怕踩雷，食完會記低心水。,foodie_photos/logo6.jpg,False,7
+8,User7,2025-06-21 05:23:14.923801+00:00,Male,36-45,technical,Kwun Tong,True,True,False,True,True,True,True,True,False,False,True,雖然唔係大廚，但對餸菜有要求，唔好比我食到半熟雞翼。,foodie_photos/logo7.jpg,False,8
+9,User8,2025-06-21 05:23:14.923801+00:00,Female,18-25,office,North,True,True,True,True,True,True,False,True,False,True,True,平時鍾意睇食評，今次都嚟分享下自己意見。,foodie_photos/logo8.jpg,False,9
+10,User9,2025-06-21 05:23:14.923801+00:00,Female,26-35,technical,Yau Tsim Mong,True,True,False,True,False,False,True,False,False,False,True,唔鍾意打字多，直接比星，一針見血。,foodie_photos/logo9.jpg,False,10
+11,User10,2025-06-21 05:23:14.923801+00:00,Female,36-45,office,Sham Shui Po,True,True,True,True,True,False,True,True,False,False,True,試過咁多間，總有幾間係你唔知嘅寶藏店。,foodie_photos/logo10.jpg,False,11
+12,User11,2025-06-21 05:23:14.923801+00:00,Male,56+,driver,Tai Po,True,False,True,False,True,True,True,False,False,False,True,幫屋企人揀兩餸飯，最緊要老少咸宜。,foodie_photos/logo11.jpg,False,12
+13,User12,2025-06-21 05:23:14.923801+00:00,Male,18-25,technical,Tsuen Wan,True,True,False,True,False,True,True,True,False,True,False,返工趕時間，兩餸飯係最快捷又實惠嘅選擇。,foodie_photos/logo12.jpg,False,13
+14,User13,2025-06-21 05:23:14.923801+00:00,Female,26-35,office,Wan Chai,True,True,True,True,False,True,False,False,False,False,True,有小朋友要食嘅，會特別留意清淡啲嘅餸。,foodie_photos/logo13.jpg,False,14
+15,User14,2025-06-21 05:23:14.923801+00:00,Female,36-45,boss,Sai Kung,True,True,False,False,True,False,True,True,False,False,True,餸多過飯先係王道，唔好俾我見到偷工減料。,foodie_photos/logo14.jpg,False,15
+16,User15,2025-06-21 05:23:14.923801+00:00,Female,46-55,wife,Kwun Tong,True,False,True,False,True,True,False,True,False,False,False,一星期食足五日，見到好嘅一定會推介比朋友。,foodie_photos/logo15.jpg,False,16
+17,User16,2025-06-21 05:23:14.923801+00:00,Male,18-25,office,Kowloon City,True,True,True,True,True,True,True,False,False,False,False,食兩餸飯如做人，講求平衡與誠意。,foodie_photos/logo16.jpg,False,17
+18,User17,2025-06-21 05:23:14.923801+00:00,Male,26-35,driver,Tuen Mun,True,True,False,True,True,False,True,True,False,False,True,尋找傳說中「汁多飯冚面」嘅終極店家。,foodie_photos/logo17.jpg,False,18
+19,User18,2025-06-21 05:23:14.923801+00:00,Male,26-35,wife,Wong Tai Sin,True,True,False,True,False,True,True,True,False,False,True,餸唔一定名貴，但要夠人情味。,foodie_photos/logo18.jpg,False,19
+20,User19,2025-06-21 05:23:14.923801+00:00,Female,18-25,office,North,True,False,True,True,True,True,True,True,False,False,True,兩餸一飯，平民藝術，日常靈魂慰藉。,foodie_photos/logo19.jpg,False,20
+21,User20,2025-06-21 05:23:14.923801+00:00,Female,26-35,office,Kwun Tong,False,False,True,False,False,False,False,False,True,True,True,每一盒飯都係一場小型味蕾冒險。,foodie_photos/logo20.jpg,False,21
+22,Rose,2025-06-22 03:32:27.415993+00:00,Female,18-25,office,Islands,False,True,True,True,False,True,False,False,False,False,False,講食飯，我品味唔會比人差架。,foodie_photos/image_23.jpg,False,22
