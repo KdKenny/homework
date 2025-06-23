@@ -46,7 +46,16 @@ def import_csv_to_db(csv_file, table_name):
             elif choice not in ['n', '']:
                 print("無效輸入，導入操作已取消。")
                 return False
-            # 若選擇 'n' 或直接按 Enter，則繼續使用 ON CONFLICT 處理
+            else:
+                # 即使不清除數據，也詢問是否要重置 ID 序列
+                reset_choice = input("是否要重置 ID 序列從 1 開始？ (y/n，預設為 n): ").lower()
+                if reset_choice == 'y':
+                    cursor.execute(f"ALTER SEQUENCE {table_name}_id_seq RESTART WITH 1")
+                    print(f"已重置表格 '{table_name}' 的 ID 序列從 1 開始。")
+        else:
+            # 如果表格是空的，也應該重置序列到 1
+            cursor.execute(f"ALTER SEQUENCE {table_name}_id_seq RESTART WITH 1")
+            print(f"表格 '{table_name}' 為空，已重置 ID 序列從 1 開始。")
         
         df_to_insert = df_cleaned.copy()
 
@@ -141,8 +150,7 @@ def clean_data_for_table(df, table_name):
         'adminusers_adminuser': ['admin_name', 'admin_email'],  # 修正表格名稱
         'comments_comment_rate': ['restaurant_name', 'comment'], # Define actual required columns
         'comments_commentrating': ['rating', 'comment_id'],
-        'auth_user': ['username', 'email'],
-        'foodie_contact': ['foodie_name', 'user_id']  # 修改為實際的欄位名稱
+        'foodie_contact': ['foodie_name', 'user_id'] 
     }
     if table_name in required_columns:
         # 檢查必需的欄位是否存在
@@ -268,11 +276,9 @@ def clean_data_for_table(df, table_name):
             df_cleaned['edit_date'] = df_cleaned['edit_date'].astype(str).str.replace('/', '-')
             df_cleaned['edit_date'] = pd.to_datetime(df_cleaned['edit_date'], errors='coerce').dt.date
 
-        # 處理布林欄位
         if 'is_published' in df_cleaned.columns:
             df_cleaned['is_published'] = df_cleaned['is_published'].astype(str).str.strip().str.upper()
             df_cleaned['is_published'] = df_cleaned['is_published'].map({'TRUE': True, 'FALSE': False, '1': True, '0': False})
-            # 修正 fillna 用法，避免 Must specify a fill 'value' or 'method' 錯誤
             df_cleaned['is_published'] = df_cleaned['is_published'].where(pd.notna(df_cleaned['is_published']), None)
 
         # 處理評分欄位，空值轉為 None
@@ -299,15 +305,14 @@ def clean_data_for_table(df, table_name):
         
         print("已清洗 'comments_comment_rate' 的欄位並處理空值。")
 
-        # 修改：如果 foodie_name 清洗後為 None，將其替換為 "AnonymousUser"
-        # 而不是移除該行，以滿足 NOT NULL 約束。
+        # 修改：如果 foodie_name 清洗後為 None，將其替換為 "Guest"
         if 'foodie_name' in df_cleaned.columns:
             # 確保 foodie_name 是字串類型，以便進行 .fillna()
             df_cleaned['foodie_name'] = df_cleaned['foodie_name'].astype(str)
-            # 將之前處理過的 None (可能來自 np.nan 或空字串) 替換為 "AnonymousUser"
+            # 將之前處理過的 None (可能來自 np.nan 或空字串) 替換為 "Guest"
             # 也要處理 pandas 讀取 CSV 時可能直接將空值讀為空字串的情況
-            df_cleaned['foodie_name'] = df_cleaned['foodie_name'].replace(['None', 'nan', 'NaN', 'NULL', 'null', ''], pd.NA, regex=False).fillna('AnonymousUser')
-            # 再次確保沒有空字串殘留，如果上一步的 pd.NA 處理後仍有空字串，也換成 AnonymousUser
+            df_cleaned['foodie_name'] = df_cleaned['foodie_name'].replace(['None', 'nan', 'NaN', 'NULL', 'null', ''], pd.NA, regex=False).fillna('Guest')
+            # 再次確保沒有空字串殘留，如果上一步的 pd.NA 處理後仍有空字串，也換成 Guest
             df_cleaned.loc[df_cleaned['foodie_name'].str.strip() == '', 'foodie_name'] = 'Guest'
             print(f"已將 'foodie_name' 為空的記錄值替換為 'Guest'。")
 
@@ -374,104 +379,6 @@ def clean_data_for_table(df, table_name):
             df_cleaned['user_id'] = df_cleaned['user_id'].apply(lambda x: int(x) if pd.notnull(x) else None)
         
         print("已清洗 'foodie_contact' 的欄位並處理空值。")
-
-    elif table_name == 'auth_user':
-        print("執行 'auth_user' 表格的特定清洗...")
-        # 處理字串欄位
-        string_cols = ['username', 'first_name', 'last_name', 'email']
-        for col in string_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip()
-                df_cleaned[col] = df_cleaned[col].replace(['NaN', 'nan', 'NULL', 'null', ''], None)
-        
-        # 特別處理 first_name 和 last_name，將 None 替換為空字串（因為資料庫設定為 NOT NULL）
-        if 'first_name' in df_cleaned.columns:
-            df_cleaned['first_name'] = df_cleaned['first_name'].fillna('')
-        if 'last_name' in df_cleaned.columns:
-            df_cleaned['last_name'] = df_cleaned['last_name'].fillna('')
-        
-        # 處理布林欄位
-        bool_cols = ['is_superuser', 'is_staff', 'is_active']
-        for col in bool_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip().str.upper()
-                df_cleaned[col] = df_cleaned[col].map({'TRUE': True, 'FALSE': False, '1': True, '0': False})
-                df_cleaned[col] = df_cleaned[col].where(pd.notna(df_cleaned[col]), False)
-        
-        # 處理日期欄位
-        date_cols = ['last_login', 'date_joined']
-        for col in date_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = pd.to_datetime(df_cleaned[col], errors='coerce')
-
-        print("已清洗 'auth_user' 的欄位並處理空值。")
-
-    elif table_name == 'foodie_contact':
-        print("執行 'foodie_contact' 表格的特定清洗...")
-        # 處理字串欄位
-        string_cols = ['foodie_name', 'gender', 'age_range', 'occupation', 'live_district', 
-                       'foodie_desc', 'foodie_photo']
-        for col in string_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip()
-                df_cleaned[col] = df_cleaned[col].replace(['NaN', 'nan', 'NULL', 'null', ''], None)
-        
-        # 特別處理 foodie_desc，將 None 替換為空字串（因為資料庫設定為 NOT NULL）
-        if 'foodie_desc' in df_cleaned.columns:
-            df_cleaned['foodie_desc'] = df_cleaned['foodie_desc'].fillna('')
-        
-        # 處理布林欄位
-        bool_cols = ['favor_chinese', 'favor_western', 'favor_veg', 'favor_organic', 
-                     'favor_japan', 'favor_korean', 'favor_thai', 'favor_seafood', 
-                     'favor_muslim', 'favor_no_beef', 'favor_no_pork', 'is_mvp']
-        for col in bool_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip().str.upper()
-                df_cleaned[col] = df_cleaned[col].map({'TRUE': True, 'FALSE': False, '1': True, '0': False})
-                df_cleaned[col] = df_cleaned[col].where(pd.notna(df_cleaned[col]), False)
-        
-        # 處理日期欄位
-        if 'updated_date' in df_cleaned.columns:
-            df_cleaned['updated_date'] = pd.to_datetime(df_cleaned['updated_date'], errors='coerce')
-        
-        # 處理 ID 欄位
-        if 'user_id' in df_cleaned.columns:
-            df_cleaned['user_id'] = pd.to_numeric(df_cleaned['user_id'], errors='coerce')
-            df_cleaned['user_id'] = df_cleaned['user_id'].apply(lambda x: int(x) if pd.notnull(x) else None)
-        
-        print("已清洗 'foodie_contact' 的欄位並處理空值。")
-
-    elif table_name == 'auth_user':
-        print("執行 'auth_user' 表格的特定清洗...")
-        # 處理字串欄位
-        string_cols = ['username', 'first_name', 'last_name', 'email']
-        for col in string_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip()
-                df_cleaned[col] = df_cleaned[col].replace(['NaN', 'nan', 'NULL', 'null', ''], None)
-        
-        # 特別處理 first_name 和 last_name，將 None 替換為空字串（因為資料庫設定為 NOT NULL）
-        if 'first_name' in df_cleaned.columns:
-            df_cleaned['first_name'] = df_cleaned['first_name'].fillna('')
-        if 'last_name' in df_cleaned.columns:
-            df_cleaned['last_name'] = df_cleaned['last_name'].fillna('')
-        
-        # 處理布林欄位
-        bool_cols = ['is_superuser', 'is_staff', 'is_active']
-        for col in bool_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = df_cleaned[col].astype(str).str.strip().str.upper()
-                df_cleaned[col] = df_cleaned[col].map({'TRUE': True, 'FALSE': False, '1': True, '0': False})
-                df_cleaned[col] = df_cleaned[col].where(pd.notna(df_cleaned[col]), False)
-        
-        # 處理日期欄位
-        date_cols = ['last_login', 'date_joined']
-        for col in date_cols:
-            if col in df_cleaned.columns:
-                df_cleaned[col] = pd.to_datetime(df_cleaned[col], errors='coerce')
-
-        print("已清洗 'auth_user' 的欄位並處理空值。")
-
     else:
         print(f"警告：未為表格 '{table_name}' 定義特定清洗邏輯，僅執行通用步驟。")
 
@@ -492,13 +399,7 @@ def erase_table_data(table_name):
     if user_confirmation != confirm_phrase:
         print("確認失敗，操作已取消。")
         return False
-    
-    # Django 環境下，密碼驗證應使用 Django 的用戶認證系統
-    # CLI 環境下，可以使用 getpass 獲取密碼，但這裡為了簡化，先跳過實際的密碼驗證
-    # password = getpass.getpass(prompt=f"請輸入管理員密碼以授權清除操作: ")
-    # if password != "your_admin_password": # 實際應用中應從安全配置讀取或更複雜驗證
-    #     print("密碼錯誤，操作已取消。")
-    #     return False
+
 
     try:
         conn = connect_db()
@@ -637,6 +538,55 @@ def import_export_auth_foodie(action):
     else:
         print(f"未知操作: {action}")
 
+def import_export_foodie_contact(action):
+    """Handles import, export, and erase operations for foodie contact data only."""
+    table = 'foodie_contact'
+    
+    if action == 'import':
+        print("\n美食家聯絡人數據導入操作:")
+        print(f"\n正在處理表格: {table}")
+        root = tk.Tk()
+        root.withdraw()
+        csv_file_path = filedialog.askopenfilename(
+            title=f"請選擇要導入到 '{table}' 的 CSV 檔案",
+            filetypes=(("CSV 檔案", "*.csv"), ("所有檔案", "*.*"))
+        )
+        root.destroy()
+        if csv_file_path:
+            print(f"選擇的檔案: {csv_file_path}")
+            import_csv_to_db(csv_file_path, table)
+        else:
+            print(f"未選擇 '{table}' 的檔案，操作已取消。")
+    
+    elif action == 'export':
+        print("\n美食家聯絡人數據導出操作:")
+        print(f"\n正在處理表格: {table}")
+        root = tk.Tk()
+        root.withdraw()
+        csv_file_path = filedialog.asksaveasfilename(
+            defaultextension=".csv",
+            filetypes=[("CSV files", "*.csv"), ("All files", "*.*")],
+            title=f"請選擇 '{table}' 的匯出位置和檔名"
+        )
+        root.destroy()
+        if csv_file_path:
+            export_db_to_csv(table, csv_file_path)
+        else:
+            print(f"未選擇 '{table}' 的儲存路徑，操作已取消。")
+    
+    elif action == 'erase':
+        print("\n美食家聯絡人數據清除操作:")
+        print("警告：此操作將清除美食家聯絡人表格的數據！")
+        confirm = input("確定要繼續嗎？(y/n): ").lower()
+        if confirm == 'y':
+            print(f"\n正在清除表格: {table}")
+            erase_table_data(table)
+        else:
+            print("操作已取消。")
+    
+    else:
+        print(f"未知操作: {action}")
+
 # --- CLI Interaction --- #
 
 def get_table_choice(action_description="操作"):
@@ -645,12 +595,12 @@ def get_table_choice(action_description="操作"):
     print("  1. 兩餸飯資料 (listings_two_dish_rice)")
     print("  2. 管理員用戶資料 (adminusers_adminuser)")
     print("  3. 評論數據 (comments_comment_rate & comments_commentrating)")
-    print("  4. 用戶及聯絡人數據 (auth_user & foodie_contact)")
+    print("  4. 美食家聯絡人數據 (foodie_contact)")
     table_map = {
         '1': 'listings_two_dish_rice',
         '2': 'adminusers_adminuser',
-        '3': 'comments_data',  # 特殊標識符，表示評論數據組
-        '4': 'auth_foodie_data' # 新增的數據組
+        '3': 'comments_data', 
+        '4': 'foodie_contact_data'
     }
     while True:
         choice = input("請輸入代號 (1-4): ")
@@ -675,8 +625,8 @@ def main():
             selected_item = get_table_choice(action_description="導入")
             if selected_item == 'comments_data':
                 import_export_comments(action='import')
-            elif selected_item == 'auth_foodie_data':
-                import_export_auth_foodie(action='import')
+            elif selected_item == 'foodie_contact_data':
+                import_export_foodie_contact(action='import')
             elif selected_item:
                 root = tk.Tk()
                 root.withdraw()
@@ -695,8 +645,8 @@ def main():
             selected_item = get_table_choice(action_description="導出")
             if selected_item == 'comments_data':
                 import_export_comments(action='export')
-            elif selected_item == 'auth_foodie_data':
-                import_export_auth_foodie(action='export')
+            elif selected_item == 'foodie_contact_data':
+                import_export_foodie_contact(action='export')
             elif selected_item:
                 root = tk.Tk()
                 root.withdraw()
@@ -715,8 +665,8 @@ def main():
             selected_item = get_table_choice(action_description="清除")
             if selected_item == 'comments_data':
                 import_export_comments(action='erase')
-            elif selected_item == 'auth_foodie_data':
-                import_export_auth_foodie(action='erase')
+            elif selected_item == 'foodie_contact_data':
+                import_export_foodie_contact(action='erase')
             elif selected_item:
                 erase_table_data(selected_item)
         
